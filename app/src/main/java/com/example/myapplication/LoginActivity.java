@@ -10,8 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
+//    cd C:\Users\Abhishek\AppData\Local\Android\Sdk\platform-tools
     EditText userName,passWord;
     Button loginButton;
 

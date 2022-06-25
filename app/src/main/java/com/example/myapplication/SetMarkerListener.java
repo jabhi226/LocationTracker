@@ -1,5 +1,5 @@
 package com.example.myapplication;
 
-public interface markerSetter {
+public interface SetMarkerListener {
     public void setMarker();
 }

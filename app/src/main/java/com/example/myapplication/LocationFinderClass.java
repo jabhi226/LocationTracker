@@ -6,8 +6,6 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.fragment.app.FragmentActivity;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,13 +15,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
-import java.util.List;
 import java.util.StringTokenizer;
-
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.internal.IGoogleMapDelegate;
 
 //class SalesFragment extends FragmentActivity {
 //
@@ -34,7 +26,7 @@ import com.google.android.gms.maps.internal.IGoogleMapDelegate;
 //        mapFragment.getMapAsync(MainMapActivity.this::onMapReady);
 //    }
 
-    public class LocationFinderClass extends AsyncTask<String, Void, String> implements markerSetter {
+    public class LocationFinderClass extends AsyncTask<String, Void, String> implements SetMarkerListener {
         Activity activity;
         Context context;
         String parent_username;
@@ -77,7 +69,6 @@ import com.google.android.gms.maps.internal.IGoogleMapDelegate;
                 while ((line = bufferedReader.readLine()) != null) {
                     stringBuilder.append(line);
                     Log.e("doInBackground", "doInBackground: append done");
-                    break;
                 }
                 Log.e("doInBackground", "doInBackground: append done" + stringBuilder.toString());
                 return stringBuilder.toString();
