@@ -1,18 +1,19 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.example.myapplication"
-        minSdkVersion 23
-        targetSdkVersion 31
+        applicationId "com.example.mylocationtracker"
+        minSdkVersion 26
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -25,16 +26,28 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
 
-    implementation 'com.android.support:appcompat-v7:31.0.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0-alpha02'
     implementation 'org.jetbrains:annotations:20.1.0'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
+    implementation 'com.google.code.gson:gson:2.10.1'
 
     // google map api
-    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+//    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+
+    implementation 'com.mapbox.maps:android:10.13.0'
 }

@@ -1,70 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    tools:context=".LoginActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="500dp"
-        android:layout_height="320dp"/>
+    tools:context=".modules.login.ui.LoginActivity">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/driver_PW"
+        android:layout_alignEnd="@+id/driver_PW"
+        android:layout_alignParentTop="true"
+        android:gravity="end"
         android:text="Welcome"
         android:textSize="50sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_below="@id/textView2"
+        android:layout_alignEnd="@id/driver_PW"
+        android:layout_marginTop="8dp"
         android:text="Please Login To Continue"
-        android:textSize="20sp"/>
+        android:textSize="12sp" />
 
     <EditText
         android:id="@+id/driver_UN"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
         android:drawablePadding="2dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
-        android:text="veer123"
-        android:textSize="20sp"/>
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="parent1"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/driver_PW"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/driver_UN"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
         android:drawablePadding="2dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:paddingLeft="10dp"
-        android:text="123"
-        android:textSize="20sp"/>
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="parent123"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="100dp"
-        android:letterSpacing="0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/driver_PW"
+        android:layout_alignStart="@id/driver_PW"
+        android:layout_alignEnd="@id/driver_PW"
+        android:layout_marginTop="8dp"
+        android:background="@color/purple_200"
         android:text="Log in"
         android:textAllCaps="false"
         android:textColor="#ffffff"
-        android:background="@color/purple_200"
-        android:textSize="20dp"/>
+        android:textSize="20dp" />
 
 
-</LinearLayout>
+</RelativeLayout>
